@@ -16,35 +16,37 @@
   </head>
 
   <body>
-    <div class = "main_top">
-      <%= link_to image_tag("Picnicar.jpeg", class: "top_logo"), root_path %>
+    <div class = "kensaku">
+      <div class = "kensaku-filter">
+          <%= link_to image_tag("Picnicar.jpeg", class: "top_logo"), root_path %>
+
+        <div class = main_text>
+          <h1 class = "text">
+            国内No.1キッチンカー検索サイト
+          </h1>
+        </div>
+
+        <div class = "main-search">
+          <ul class = "search_type">
+            <li class = "search-list">
+              <%= link_to "キーワードから探す", url:root_path, class: "search-keyword" %>
+              <%= link_to "都道府県から探す", url:root_path, class: "search-prefecture" %>
+              <%= link_to "現在地から探す", url:root_path, class: "search-here" %>
+            </li>
+          </ul>
+        </div>
+          
+        <div class = "main-form">
+          <%#= form_for() do |f| %>
+            <form class="search-form" action="#">
+              <%#= f.submit :hoge, class:"hoge", id:"hoge", placeholder:"キーワードから探す", maxlength:"30" %>
+              <%= link_to image_tag("search-button.png", class: "search-icon"), root_path %>
+            </form>
+          <%# end %>
+        </div>
+      </div>
     </div>
 
-    <div class = main_text>
-      <h1 class = "text">
-        国内No.1キッチンカー検索サイト
-      </h1>
-    </div>
-
-    <div class = "main-search">
-      <ul class = "search_type">
-        <li>キーワードから探す</li>
-        <li>都道府県から探す</li>
-        <li>現在地から探す</li>
-      </ul>
-    </div>
-      
-    <div class = "main-form">
-      <%#= form_for() do |f| %>
-        <form class="search-form" action="#">
-          <%#= f.submit :hoge, class:"hoge", id:"hoge", placeholder:"キーワードから探す", maxlength:"30" %>
-          <div class="search-button">
-            <%= link_to image_tag("iniini.jpeg", class: "search-icon"), root_path %>
-          </div>
-          <script src="top.js"></script>
-        </form>
-      <%# end %>
-    </div>
 
     <div class = "main">
       <h2 class = "main-title">あなたの近くにあるキッチンカーたち</h2>
@@ -52,7 +54,7 @@
           <li class = "main-cars">
 
             <div class = "card">
-              <%= link_to image_tag("iniini.jpeg", class: "car-icon"), root_path %>
+              <%= link_to image_tag("car1.jpeg", class: "car-icon"), root_path %>
               <h3>
                 <%= link_to "car１", url:root_path, class: "car-name" %>
               </h3>
@@ -61,7 +63,7 @@
             </div>
 
             <div class = "card">
-              <%= link_to image_tag("iniini.jpeg", class: "car-icon"), root_path %>
+              <%= link_to image_tag("car2.jpeg", class: "car-icon"), root_path %>
               <h3>
                 <%= link_to "car2", url:root_path, class: "car-name" %>
               </h3>
@@ -70,7 +72,7 @@
             </div>
 
             <div class = "card">
-              <%= link_to image_tag("iniini.jpeg", class: "car-icon"), root_path %>
+              <%= link_to image_tag("car3", class: "car-icon"), root_path %>
               <h3>
                 <%= link_to "car3", url:root_path, class: "car-name" %>
               </h3>
@@ -79,9 +81,55 @@
             </div>
 
             <div class = "card">
-              <%= link_to image_tag("viewmore.png", class: "car-icon1"), root_path %>  
-              <%= link_to "viewmore", url:root_path, class: "viewmore" %>
-              <p class = "car-summary">もっと見る</p>
+              <%= link_to image_tag("viewmore.png", class: "viewmore-icon"), root_path %>
+              <%= link_to "もっと見る", url:root_path, class: "viewmore-summary" %>
+            </div>
+
+                <%# 下記はコントローラー設定後 %>
+                  <%# @picnicars.each do |car|%>
+                    <%#= render partial:"car", locals: { car: car } %>
+                  <%# end>
+                <%# 上記はコントローラー設定後%>
+
+          </li>
+        </ul>
+    </div>
+
+    <div class = "rank-main">
+      <h2 class = "main-title">今週の平均評価ランキング</h2>
+        <ul class = "rank-table">
+          <li class = "rank-cars">
+
+            <div class = "card">
+              <%= link_to image_tag("rank1.jpeg", class: "car-icon"), root_path %>
+              <h3>
+                <%= link_to "No.１", url:root_path, class: "car-name" %>
+              </h3>
+              <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+              <%= link_to "堂々の堂安一", url:root_path, class: "popularity" %>
+            </div>
+
+            <div class = "card">
+              <%= link_to image_tag("rank2.jpeg", class: "car-icon"), root_path %>
+              <h3>
+                <%= link_to "No.2", url:root_path, class: "car-name" %>
+              </h3>
+              <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+              <%= link_to "僕は小杉ですヨ。ッとブログ著者田中さんの車", url:root_path, class: "popularity" %>
+            </div>
+
+            <div class = "card">
+              <%= link_to image_tag("rank3.jpeg", class: "car-icon"), root_path %>
+              <h3>
+                <%= link_to "No.3", url:root_path, class: "car-name" %>
+              </h3>
+              <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+              <%= link_to "あのびっくりパン", url:root_path, class: "popularity" %>
+            </div>
+
+            <div class = "card">
+              <%= link_to image_tag("viewmore.png", class: "viewmore-icon"), root_path %>
+              <%= link_to "ランキングをもっと見る", url:root_path, class: "viewmore-summary" %>
             </div>
 
                 <%# 下記はコントローラー設定後 %>
