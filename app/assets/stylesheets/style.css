@@ -73,10 +73,6 @@ a {
   color: white;
 }
 
-.top_logo{
-  align-items: center;
-}
-
 .search_type{
   display: flex;
   margin: 60px 40px;
@@ -86,12 +82,42 @@ a {
   margin: 60px 40px;
 }
 
+@keyframes moving{
+  100% {
+    transform: translateX(3000px);
+  }
+}
+
+@keyframes moving2{
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  0% {
+    transform: translateY(0px);
+  }
+}
+
+.moving{
+  animation: moving 10s linear infinite;
+}
+
+.moving2{
+  animation: moving2 0.1s linear infinite;
+}
+
 /* ヘッダー終わり */
 
 
 /* メイン始まり */
 .text{
   text-align: center;
+}
+
+.top_logo{
+  height: fit-content;
 }
 
 .main-cars{
