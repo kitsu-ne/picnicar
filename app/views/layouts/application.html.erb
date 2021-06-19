@@ -36,7 +36,16 @@
     </header>
     <%= yield %>
     <footer class="footer">
-      <p class="copyright">Copyright © LePTec All rights reserved.</p>
+      <div class = "footer_main">
+        <div class="footer_left">
+          <%= link_to "店舗を探す", root_path, class: "footer_button" %>
+          <%= link_to "開発への思い", root_path, class: "footer_button" %>
+          <%= link_to "その他", root_path, class: "footer_button" %>
+        </div>
+        <div class="footer_right">
+          <p class="copyright">Copyright © LePTec All rights reserved.</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

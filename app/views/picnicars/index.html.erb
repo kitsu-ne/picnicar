@@ -54,30 +54,33 @@
           <li class = "main-cars">
 
             <div class = "card">
-              <%= link_to image_tag("car1.jpeg", class: "car-icon"), root_path %>
-              <h3>
-                <%= link_to "car１", url:root_path, class: "car-name" %>
-              </h3>
+              <%= link_to image_tag("car1.jpeg", class: "car-icon1"), root_path %>
+              <div class = "inner-section">
+                <p class = "star1">★3.5</p>
+                <p class = "car-name"><%= link_to "car3", url:root_path %>
+              </div>
               <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-              <%= link_to "現在地から150m", url:root_path, class: "distance" %>
+              <p class = "distance"><%= link_to "現在地から150m", url:root_path %>
             </div>
 
             <div class = "card">
-              <%= link_to image_tag("car2.jpeg", class: "car-icon"), root_path %>
-              <h3>
-                <%= link_to "car2", url:root_path, class: "car-name" %>
-              </h3>
+              <%= link_to image_tag("car2.jpeg", class: "car-icon2"), root_path %>
+              <div class = "inner-section">
+                <p class = "star2">★7.5</p>
+                <p class = "car-name"><%= link_to "car3", url:root_path %>
+              </div>
               <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-              <%= link_to "現在地から300m", url:root_path, class: "distance" %>
+              <p class = "distance"><%= link_to "現在地から150m", url:root_path %>
             </div>
 
             <div class = "card">
-              <%= link_to image_tag("car3", class: "car-icon"), root_path %>
-              <h3>
-                <%= link_to "car3", url:root_path, class: "car-name" %>
-              </h3>
+              <%= link_to image_tag("car3", class: "car-icon3"), root_path %>
+              <div class = "inner-section">
+                <p class = "star3">★4.5</p>
+                <p class = "car-name"><%= link_to "car3", url:root_path %>
+              </div>
               <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-              <%= link_to "現在地から500000km", url:root_path, class: "distance" %>
+              <p class = "distance"><%= link_to "現在地から150m", url:root_path %>
             </div>
 
             <div class = "card">
@@ -102,29 +105,27 @@
 
             <div class = "card">
               <%= link_to image_tag("rank1.jpeg", class: "car-icon"), root_path %>
-              <h3>
-                <%= link_to "No.１", url:root_path, class: "car-name" %>
-              </h3>
+              <h3><%= link_to "No.１", url:root_path, class: "car-name" %></h3>
               <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-              <%= link_to "堂々の堂安一", url:root_path, class: "popularity" %>
+              <p class = "popularity" ><%= link_to "堂々の堂安一", url:root_path %></p>
             </div>
 
             <div class = "card">
               <%= link_to image_tag("rank2.jpeg", class: "car-icon"), root_path %>
               <h3>
-                <%= link_to "No.2", url:root_path, class: "car-name" %>
+              <%= link_to "No.2", url:root_path, class: "car-name" %>
               </h3>
               <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-              <%= link_to "僕は小杉ですヨ。ッとブログ著者田中さんの車", url:root_path, class: "popularity" %>
+              <p class = "popularity" ><%= link_to "僕は小杉ですヨ。ッとブログ著者田中さんの車", url:root_path %></p>
             </div>
 
             <div class = "card">
               <%= link_to image_tag("rank3.jpeg", class: "car-icon"), root_path %>
               <h3>
-                <%= link_to "No.3", url:root_path, class: "car-name" %>
+              <%= link_to "No.3", url:root_path, class: "car-name" %>
               </h3>
               <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-              <%= link_to "あのびっくりパン", url:root_path, class: "popularity" %>
+              <p class = "popularity" ><%= link_to "あのびっくりパン", url:root_path %></p>
             </div>
 
             <div class = "card">
@@ -139,6 +140,19 @@
                 <%# 上記はコントローラー設定後%>
 
           </li>
+        </ul>
+    </div>
+
+    <div class ="pref-main">
+      <h2 class = "main-title">都道府県から探す</h2>
+        <ul class = "pref-group">
+            <li class = "pref-lists"><%= link_to "北海道・東北", url:root_path, class: "pref-list"%></li>
+            <li class = "pref-lists"><%= link_to "関東", url:root_path, class: "pref-list"%></li>
+            <li class = "pref-lists"><%= link_to "北陸・甲信越", url:root_path, class: "pref-list"%></li>
+            <li class = "pref-lists"><%= link_to "東海", url:root_path, class: "pref-list"%></li>
+            <li class = "pref-lists"><%= link_to "近畿", url:root_path, class: "pref-list"%></li>
+            <li class = "pref-lists"><%= link_to "中国・四国", url:root_path, class: "pref-list"%></li>
+            <li class = "pref-lists"><%= link_to "沖縄", url:root_path, class: "pref-list"%></li>
         </ul>
     </div>
 
