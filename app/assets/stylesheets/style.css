@@ -229,11 +229,15 @@ a {
   padding-top: 40px;
 }
 
-.pref-lists{
+.pref-list1,.pref-list2,.pref-list3,.pref-list4,.pref-list5,.pref-list6,.pref-list7,.pref-list8{
   display: flex;
   flex-direction: column;
   margin-left: 20px;
   margin-top: 20px;
+}
+
+.hokkaido,.hokuriku,.tohkai,.kansai,.kinki,.china,.kyushu{
+  
 }
 
 ul.pref-list{

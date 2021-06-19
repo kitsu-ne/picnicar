@@ -146,14 +146,137 @@
     <div class ="pref-main">
       <h2 class = "main-title">都道府県から探す</h2>
         <ul class = "pref-group">
-            <li class = "pref-lists"><%= link_to "北海道・東北", url:root_path, class: "pref-list"%></li>
-            <li class = "pref-lists"><%= link_to "関東", url:root_path, class: "pref-list"%></li>
-            <li class = "pref-lists"><%= link_to "北陸・甲信越", url:root_path, class: "pref-list"%></li>
-            <li class = "pref-lists"><%= link_to "東海", url:root_path, class: "pref-list"%></li>
-            <li class = "pref-lists"><%= link_to "近畿", url:root_path, class: "pref-list"%></li>
-            <li class = "pref-lists"><%= link_to "中国・四国", url:root_path, class: "pref-list"%></li>
-            <li class = "pref-lists"><%= link_to "沖縄", url:root_path, class: "pref-list"%></li>
+            <li class = "pref-list1"><%= link_to "北海道・東北", url:root_path %></li>
+              <ul class = "hokkaido">
+                <div class = "lucky">
+                  <%= link_to "北海道", url:root_path, class: "pref-something" %>
+                  <%= link_to "青森", url:root_path, class: "pref-something" %>
+                  <%= link_to "岩手", url:root_path, class: "pref-something" %>
+                  <%= link_to "宮城", url:root_path, class: "pref-something" %>
+                  <%= link_to "秋田", url:root_path, class: "pref-something" %>
+                  <%= link_to "山形", url:root_path, class: "pref-something" %>
+                  <%= link_to "福島", url:root_path, class: "pref-something" %>
+                </div>
+              </ul>
+            <li class = "pref-list2"><%= link_to "関東", url:root_path %></li>
+              <ul class = "kanto">
+                <%= link_to "茨城", url:root_path, class: "pref-something" %>
+                <%= link_to "栃木", url:root_path, class: "pref-something" %>
+                <%= link_to "群馬", url:root_path, class: "pref-something" %>
+                <%= link_to "埼玉", url:root_path, class: "pref-something" %>
+                <%= link_to "千葉", url:root_path, class: "pref-something" %>
+                <%= link_to "東京", url:root_path, class: "pref-something" %>
+                <%= link_to "神奈川", url:root_path, class: "pref-something" %>
+              </ul>
+            <li class = "pref-list3"><%= link_to "北陸・甲信越", url:root_path %></li>
+              <ul class = "hokuriku">
+                <%= link_to "新潟", url:root_path, class: "pref-something" %>
+                <%= link_to "富山", url:root_path, class: "pref-something" %>
+                <%= link_to "石川", url:root_path, class: "pref-something" %>
+              </ul>
+            <li class = "pref-list4"><%= link_to "東海", url:root_path %></li>
+              <ul class = "tohkai">
+                <%= link_to "福井", url:root_path, class: "pref-something" %>
+                <%= link_to "山梨", url:root_path, class: "pref-something" %>
+                <%= link_to "長野", url:root_path, class: "pref-something" %>
+                <%= link_to "岐阜", url:root_path, class: "pref-something" %>
+                <%= link_to "静岡", url:root_path, class: "pref-something" %>
+                <%= link_to "愛知", url:root_path, class: "pref-something" %>
+              </ul>
+            <li class = "pref-list5"><%= link_to "関西", url:root_path %></li>
+              <ul class = "kansai">
+                <%= link_to "京都", url:root_path, class: "pref-something" %>
+                <%= link_to "大阪", url:root_path, class: "pref-something" %>
+                <%= link_to "兵庫", url:root_path, class: "pref-something" %>
+              </ul>
+            <li class = "pref-list6"><%= link_to "近畿", url:root_path %></li>
+              <ul class = "kinki">
+                <%= link_to "三重", url:root_path, class: "pref-something" %>
+                <%= link_to "滋賀", url:root_path, class: "pref-something" %>
+                <%= link_to "奈良", url:root_path, class: "pref-something" %>
+                <%= link_to "和歌山", url:root_path, class: "pref-something" %>
+              </ul>
+            <li class = "pref-list7"><%= link_to "中国・四国", url:root_path %></li>
+              <ul class = "china">
+                <%= link_to "鳥取", url:root_path, class: "pref-something" %>
+                <%= link_to "島根", url:root_path, class: "pref-something" %>
+                <%= link_to "岡山", url:root_path, class: "pref-something" %>
+                <%= link_to "広島", url:root_path, class: "pref-something" %>
+                <%= link_to "山口", url:root_path, class: "pref-something" %>
+                <%= link_to "徳島", url:root_path, class: "pref-something" %>
+                <%= link_to "香川", url:root_path, class: "pref-something" %>
+                <%= link_to "愛媛", url:root_path, class: "pref-something" %>
+                <%= link_to "高知", url:root_path, class: "pref-something" %>
+              </ul>
+            <li class = "pref-list8"><%= link_to "九州・沖縄", url:root_path %></li>
+              <ul class = "kyushu">
+                <%= link_to "福岡", url:root_path, class: "pref-something" %>
+                <%= link_to "佐賀", url:root_path, class: "pref-something" %>
+                <%= link_to "長崎", url:root_path, class: "pref-something" %>
+                <%= link_to "熊本", url:root_path, class: "pref-something" %>
+                <%= link_to "大分", url:root_path, class: "pref-something" %>
+                <%= link_to "宮崎", url:root_path, class: "pref-something" %>
+                <%= link_to "鹿児島", url:root_path, class: "pref-something" %>
+                <%= link_to "沖縄", url:root_path, class: "pref-something" %>
+              </ul>
         </ul>
+        <script>
+          $('.hokkaido').hide();
+          $('.pref-list1').mouseover(function(){
+            $('.hokkaido').show(200);
+          }).mouseout(function(){
+            $('.hokkaido').hide(200);
+          });
+
+          $('.kanto').hide();
+          $('.pref-list2').mouseover(function(){
+            $('.kanto').show(200);
+          }).mouseout(function(){
+            $('.kanto').hide(200);
+          });
+
+          $('.hokuriku').hide();
+          $('.pref-list3').mouseover(function(){
+            $('.hokuriku').show(200);
+          }).mouseout(function(){
+            $('.hokuriku').hide(200);
+          });
+
+          $('.tohkai').hide();
+          $('.pref-list4').mouseover(function(){
+            $('.tohkai').show(200);
+          }).mouseout(function(){
+            $('.tohkai').hide(200);
+          });
+
+          $('.kansai').hide();
+          $('.pref-list5').mouseover(function(){
+            $('.kansai').show(200);
+          }).mouseout(function(){
+            $('.kansai').hide(200);
+          });
+
+          $('.kinki').hide();
+          $('.pref-list6').mouseover(function(){
+            $('.kinki').show(200);
+          }).mouseout(function(){
+            $('.kinki').hide(200);
+          });
+
+          $('.china').hide();
+          $('.pref-list7').mouseover(function(){
+            $('.china').show(200);
+          }).mouseout(function(){
+            $('.china').hide(200);
+          });
+
+          $('.kyushu').hide();
+          $('.pref-list8').mouseover(function(){
+            $('.kyushu').show(200);
+          }).mouseout(function(){
+            $('.kyushu').hide(200);
+          });
+        </script>
     </div>
 
   </body>
