@@ -1,20 +1,24 @@
-      <li class='list'>
-        <%= link_to cars_path(car.id) do %>
-          <div class='car-img-content'>
-            <%= image_tag(car.image, class: "car-img") %>
-          </div>
+<%= render "shared/header" %>
 
-          <div class='car-info'>
-            <h3 class='car-name'>
-              <%= car.car_name %>
-            </h3>
-            <div class='car-price'>
-              <span><%= car.price %>円<br><%= car.delivery_fee.name %></span>
-              <div class='star-btn'>
-                <%= image_tag "star.png", class:"star-icon" %>
-                <span class='star-count'>0</span>
-              </div>
-            </div>
+  <li class='list'>
+    <%= link_to cars_path(car.id) do %>
+      <div class='car-img-content'>
+        <%= image_tag(car.image, class: "car-img") %>
+      </div>
+
+      <div class='car-info'>
+        <h3 class='car-name'>
+          <%= car.car_name %>
+        </h3>
+        <div class='car-price'>
+          <span><%= car.price %>円<br><%= car.delivery_fee.name %></span>
+          <div class='star-btn'>
+            <%= image_tag "star.png", class:"star-icon" %>
+            <span class='star-count'>0</span>
           </div>
-        <% end %>
-      </li>
+        </div>
+      </div>
+    <% end %>
+  </li>
+
+<%= render "shared/footer" %>

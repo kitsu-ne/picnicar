@@ -11,10 +11,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string  :last_kana,          null: false
       t.date    :birth_date,         null: false
       t.string  :phone_number,       null: false
-      t.integer :vibe_id,           null: false
-      t.integer :food_id,           null: false
-      t.integer :drink_id,          null: false
-      t.integer :prefecture_id,     null: false
+      t.integer :vibe_id,            null: false
+      t.integer :food_id,            null: false
+      t.integer :drink_id,           null: false
+      t.integer :prefecture_id,      null: false
 
       ## Recoverable
       t.string   :reset_password_token

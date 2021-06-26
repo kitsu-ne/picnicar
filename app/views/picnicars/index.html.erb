@@ -1,290 +1,268 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <script>
-      (function(d) {
-      var config = {
-        kitId: 'qco7luc',
-        scriptTimeout: 3000,
-        async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-      })(document);
-    </script>
-    <meta charset="UTF-8">
-    <title>Picnicar</title>
-  </head>
+<%= render "shared/header" %>
 
-  <body>
-    <div class = "kensaku">
-      <div class = "kensaku-filter">
-          <%= link_to image_tag("Picnicar.jpeg", class: "top_logo"), root_path %>
+<body>
+  <div class = "kensaku">
+    <div class = "kensaku-filter">
+        <%= link_to image_tag("Picnicar.jpeg", class: "top_logo"), root_path %>
 
-        <div class = main_text>
-          <h1 class = "text">
-            国内No.1キッチンカー検索サイト
-          </h1>
-        </div>
+      <div class = main_text>
+        <h1 class = "text">
+          国内No.1キッチンカー検索サイト
+        </h1>
+      </div>
 
-        <div class = "main-search">
-          <ul class = "search_type">
-            <li class = "search-list">
-              <%= link_to "キーワードから探す", url:root_path, class: "search-keyword" %>
-              <%= link_to "都道府県から探す", url:root_path, class: "search-prefecture" %>
-              <%= link_to "現在地から探す", url:root_path, class: "search-here" %>
-            </li>
-          </ul>
-        </div>
-          
-        <div class = "main-form">
-          <%#= form_for() do |f| %>
-            <form class="search-form" action="#">
-              <%#= f.submit :hoge, class:"hoge", id:"hoge", placeholder:"キーワードから探す", maxlength:"30" %>
-              <%= link_to image_tag("search-button.png", class: "search-icon"), root_path %>
-            </form>
-          <%# end %>
-        </div>
+      <div class = "main-search">
+        <ul class = "search_type">
+          <li class = "search-list">
+            <%= link_to "キーワードから探す", url:root_path, class: "search-keyword" %>
+            <%= link_to "都道府県から探す", url:root_path, class: "search-prefecture" %>
+            <%= link_to "現在地から探す", url:root_path, class: "search-here" %>
+          </li>
+        </ul>
+      </div>
+        
+      <div class = "main-form">
+        <%#= form_for() do |f| %>
+          <form class="search-form" action="#">
+            <%#= f.submit :hoge, class:"hoge", id:"hoge", placeholder:"キーワードから探す", maxlength:"30" %>
+            <%= link_to image_tag("search-button.png", class: "search-icon"), root_path %>
+          </form>
+        <%# end %>
       </div>
     </div>
+  </div>
 
 
-    <div class = "main">
-      <h2 class = "main-title">あなたの近くにあるキッチンカーたち</h2>
-        <ul class = "cars-table">
-          <li class = "main-cars">
+  <div class = "main">
+    <h2 class = "main-title">あなたの近くにあるキッチンカーたち</h2>
+      <ul class = "cars-table">
+        <li class = "main-cars">
 
-            <div class = "card">
-              <%= link_to image_tag("car1.jpeg", class: "car-icon1"), root_path %>
-              <div class = "inner-section">
-                <p class = "star1">★3.5</p>
-                <p class = "car-name"><%= link_to "car3", url:root_path %>
+          <div class = "card">
+            <%= link_to image_tag("car1.jpeg", class: "car-icon1"), root_path %>
+            <div class = "inner-section">
+              <p class = "star1">★3.5</p>
+              <p class = "car-name"><%= link_to "car3", url:root_path %>
+            </div>
+            <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+            <p class = "distance"><%= link_to "現在地から150m", url:root_path %>
+          </div>
+
+          <div class = "card">
+            <%= link_to image_tag("car2.jpeg", class: "car-icon2"), root_path %>
+            <div class = "inner-section">
+              <p class = "star2">★7.5</p>
+              <p class = "car-name"><%= link_to "car3", url:root_path %>
+            </div>
+            <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+            <p class = "distance"><%= link_to "現在地から150m", url:root_path %>
+          </div>
+
+          <div class = "card">
+            <%= link_to image_tag("car3", class: "car-icon3"), root_path %>
+            <div class = "inner-section">
+              <p class = "star3">★4.5</p>
+              <p class = "car-name"><%= link_to "car3", url:root_path %>
+            </div>
+            <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+            <p class = "distance"><%= link_to "現在地から150m", url:root_path %>
+          </div>
+
+          <div class = "card">
+            <%= link_to image_tag("viewmore.png", class: "viewmore-icon"), root_path %>
+            <%= link_to "もっと見る", url:root_path, class: "viewmore-summary" %>
+          </div>
+
+              <%# 下記はコントローラー設定後 %>
+                <%# @picnicars.each do |car|%>
+                  <%#= render partial:"car", locals: { car: car } %>
+                <%# end>
+              <%# 上記はコントローラー設定後%>
+
+        </li>
+      </ul>
+  </div>
+
+  <div class = "rank-main">
+    <h2 class = "main-title">今週の平均評価ランキング</h2>
+      <ul class = "rank-table">
+        <li class = "rank-cars">
+
+          <div class = "card">
+            <%= link_to image_tag("rank1.jpeg", class: "car-icon"), root_path %>
+            <h3><%= link_to "No.１", url:root_path, class: "car-name" %></h3>
+            <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+            <p class = "popularity" ><%= link_to "堂々の堂安一", url:root_path %></p>
+          </div>
+
+          <div class = "card">
+            <%= link_to image_tag("rank2.jpeg", class: "car-icon"), root_path %>
+            <h3>
+            <%= link_to "No.2", url:root_path, class: "car-name" %>
+            </h3>
+            <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+            <p class = "popularity" ><%= link_to "僕は小杉ですヨ。ッとブログ著者田中さんの車", url:root_path %></p>
+          </div>
+
+          <div class = "card">
+            <%= link_to image_tag("rank3.jpeg", class: "car-icon"), root_path %>
+            <h3>
+            <%= link_to "No.3", url:root_path, class: "car-name" %>
+            </h3>
+            <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+            <p class = "popularity" ><%= link_to "あのびっくりパン", url:root_path %></p>
+          </div>
+
+          <div class = "card">
+            <%= link_to image_tag("viewmore.png", class: "viewmore-icon"), root_path %>
+            <%= link_to "ランキングをもっと見る", url:root_path, class: "viewmore-summary" %>
+          </div>
+
+              <%# 下記はコントローラー設定後 %>
+                <%# @picnicars.each do |car|%>
+                  <%#= render partial:"car", locals: { car: car } %>
+                <%# end>
+              <%# 上記はコントローラー設定後%>
+
+        </li>
+      </ul>
+  </div>
+
+  <div class ="pref-main">
+    <h2 class = "main-title">都道府県から探す</h2>
+      <ul class = "pref-group">
+          <li class = "pref-list1"><%= link_to "北海道・東北", url:root_path %></li>
+            <ul class = "hokkaido">
+              <div class = "lucky">
+                <%= link_to "北海道", url:root_path, class: "pref-something" %>
+                <%= link_to "青森", url:root_path, class: "pref-something" %>
+                <%= link_to "岩手", url:root_path, class: "pref-something" %>
+                <%= link_to "宮城", url:root_path, class: "pref-something" %>
+                <%= link_to "秋田", url:root_path, class: "pref-something" %>
+                <%= link_to "山形", url:root_path, class: "pref-something" %>
+                <%= link_to "福島", url:root_path, class: "pref-something" %>
               </div>
-              <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-              <p class = "distance"><%= link_to "現在地から150m", url:root_path %>
-            </div>
+            </ul>
+          <li class = "pref-list2"><%= link_to "関東", url:root_path %></li>
+            <ul class = "kanto">
+              <%= link_to "茨城", url:root_path, class: "pref-something" %>
+              <%= link_to "栃木", url:root_path, class: "pref-something" %>
+              <%= link_to "群馬", url:root_path, class: "pref-something" %>
+              <%= link_to "埼玉", url:root_path, class: "pref-something" %>
+              <%= link_to "千葉", url:root_path, class: "pref-something" %>
+              <%= link_to "東京", url:root_path, class: "pref-something" %>
+              <%= link_to "神奈川", url:root_path, class: "pref-something" %>
+            </ul>
+          <li class = "pref-list3"><%= link_to "北陸・甲信越", url:root_path %></li>
+            <ul class = "hokuriku">
+              <%= link_to "新潟", url:root_path, class: "pref-something" %>
+              <%= link_to "富山", url:root_path, class: "pref-something" %>
+              <%= link_to "石川", url:root_path, class: "pref-something" %>
+            </ul>
+          <li class = "pref-list4"><%= link_to "東海", url:root_path %></li>
+            <ul class = "tohkai">
+              <%= link_to "福井", url:root_path, class: "pref-something" %>
+              <%= link_to "山梨", url:root_path, class: "pref-something" %>
+              <%= link_to "長野", url:root_path, class: "pref-something" %>
+              <%= link_to "岐阜", url:root_path, class: "pref-something" %>
+              <%= link_to "静岡", url:root_path, class: "pref-something" %>
+              <%= link_to "愛知", url:root_path, class: "pref-something" %>
+            </ul>
+          <li class = "pref-list5"><%= link_to "関西", url:root_path %></li>
+            <ul class = "kansai">
+              <%= link_to "京都", url:root_path, class: "pref-something" %>
+              <%= link_to "大阪", url:root_path, class: "pref-something" %>
+              <%= link_to "兵庫", url:root_path, class: "pref-something" %>
+            </ul>
+          <li class = "pref-list6"><%= link_to "近畿", url:root_path %></li>
+            <ul class = "kinki">
+              <%= link_to "三重", url:root_path, class: "pref-something" %>
+              <%= link_to "滋賀", url:root_path, class: "pref-something" %>
+              <%= link_to "奈良", url:root_path, class: "pref-something" %>
+              <%= link_to "和歌山", url:root_path, class: "pref-something" %>
+            </ul>
+          <li class = "pref-list7"><%= link_to "中国・四国", url:root_path %></li>
+            <ul class = "china">
+              <%= link_to "鳥取", url:root_path, class: "pref-something" %>
+              <%= link_to "島根", url:root_path, class: "pref-something" %>
+              <%= link_to "岡山", url:root_path, class: "pref-something" %>
+              <%= link_to "広島", url:root_path, class: "pref-something" %>
+              <%= link_to "山口", url:root_path, class: "pref-something" %>
+              <%= link_to "徳島", url:root_path, class: "pref-something" %>
+              <%= link_to "香川", url:root_path, class: "pref-something" %>
+              <%= link_to "愛媛", url:root_path, class: "pref-something" %>
+              <%= link_to "高知", url:root_path, class: "pref-something" %>
+            </ul>
+          <li class = "pref-list8"><%= link_to "九州・沖縄", url:root_path %></li>
+            <ul class = "kyushu">
+              <%= link_to "福岡", url:root_path, class: "pref-something" %>
+              <%= link_to "佐賀", url:root_path, class: "pref-something" %>
+              <%= link_to "長崎", url:root_path, class: "pref-something" %>
+              <%= link_to "熊本", url:root_path, class: "pref-something" %>
+              <%= link_to "大分", url:root_path, class: "pref-something" %>
+              <%= link_to "宮崎", url:root_path, class: "pref-something" %>
+              <%= link_to "鹿児島", url:root_path, class: "pref-something" %>
+              <%= link_to "沖縄", url:root_path, class: "pref-something" %>
+            </ul>
+      </ul>
+      <script>
+        $('.hokkaido').hide();
+        $('.pref-list1').mouseover(function(){
+          $('.hokkaido').show(200);
+        }).mouseout(function(){
+          $('.hokkaido').hide(200);
+        });
 
-            <div class = "card">
-              <%= link_to image_tag("car2.jpeg", class: "car-icon2"), root_path %>
-              <div class = "inner-section">
-                <p class = "star2">★7.5</p>
-                <p class = "car-name"><%= link_to "car3", url:root_path %>
-              </div>
-              <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-              <p class = "distance"><%= link_to "現在地から150m", url:root_path %>
-            </div>
+        $('.kanto').hide();
+        $('.pref-list2').mouseover(function(){
+          $('.kanto').show(200);
+        }).mouseout(function(){
+          $('.kanto').hide(200);
+        });
 
-            <div class = "card">
-              <%= link_to image_tag("car3", class: "car-icon3"), root_path %>
-              <div class = "inner-section">
-                <p class = "star3">★4.5</p>
-                <p class = "car-name"><%= link_to "car3", url:root_path %>
-              </div>
-              <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-              <p class = "distance"><%= link_to "現在地から150m", url:root_path %>
-            </div>
+        $('.hokuriku').hide();
+        $('.pref-list3').mouseover(function(){
+          $('.hokuriku').show(200);
+        }).mouseout(function(){
+          $('.hokuriku').hide(200);
+        });
 
-            <div class = "card">
-              <%= link_to image_tag("viewmore.png", class: "viewmore-icon"), root_path %>
-              <%= link_to "もっと見る", url:root_path, class: "viewmore-summary" %>
-            </div>
+        $('.tohkai').hide();
+        $('.pref-list4').mouseover(function(){
+          $('.tohkai').show(200);
+        }).mouseout(function(){
+          $('.tohkai').hide(200);
+        });
 
-                <%# 下記はコントローラー設定後 %>
-                  <%# @picnicars.each do |car|%>
-                    <%#= render partial:"car", locals: { car: car } %>
-                  <%# end>
-                <%# 上記はコントローラー設定後%>
+        $('.kansai').hide();
+        $('.pref-list5').mouseover(function(){
+          $('.kansai').show(200);
+        }).mouseout(function(){
+          $('.kansai').hide(200);
+        });
 
-          </li>
-        </ul>
-    </div>
+        $('.kinki').hide();
+        $('.pref-list6').mouseover(function(){
+          $('.kinki').show(200);
+        }).mouseout(function(){
+          $('.kinki').hide(200);
+        });
 
-    <div class = "rank-main">
-      <h2 class = "main-title">今週の平均評価ランキング</h2>
-        <ul class = "rank-table">
-          <li class = "rank-cars">
+        $('.china').hide();
+        $('.pref-list7').mouseover(function(){
+          $('.china').show(200);
+        }).mouseout(function(){
+          $('.china').hide(200);
+        });
 
-            <div class = "card">
-              <%= link_to image_tag("rank1.jpeg", class: "car-icon"), root_path %>
-              <h3><%= link_to "No.１", url:root_path, class: "car-name" %></h3>
-              <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-              <p class = "popularity" ><%= link_to "堂々の堂安一", url:root_path %></p>
-            </div>
+        $('.kyushu').hide();
+        $('.pref-list8').mouseover(function(){
+          $('.kyushu').show(200);
+        }).mouseout(function(){
+          $('.kyushu').hide(200);
+        });
+      </script>
+  </div>
+  <%= render "shared/footer" %>
 
-            <div class = "card">
-              <%= link_to image_tag("rank2.jpeg", class: "car-icon"), root_path %>
-              <h3>
-              <%= link_to "No.2", url:root_path, class: "car-name" %>
-              </h3>
-              <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-              <p class = "popularity" ><%= link_to "僕は小杉ですヨ。ッとブログ著者田中さんの車", url:root_path %></p>
-            </div>
-
-            <div class = "card">
-              <%= link_to image_tag("rank3.jpeg", class: "car-icon"), root_path %>
-              <h3>
-              <%= link_to "No.3", url:root_path, class: "car-name" %>
-              </h3>
-              <p class = "car-summary">テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
-              <p class = "popularity" ><%= link_to "あのびっくりパン", url:root_path %></p>
-            </div>
-
-            <div class = "card">
-              <%= link_to image_tag("viewmore.png", class: "viewmore-icon"), root_path %>
-              <%= link_to "ランキングをもっと見る", url:root_path, class: "viewmore-summary" %>
-            </div>
-
-                <%# 下記はコントローラー設定後 %>
-                  <%# @picnicars.each do |car|%>
-                    <%#= render partial:"car", locals: { car: car } %>
-                  <%# end>
-                <%# 上記はコントローラー設定後%>
-
-          </li>
-        </ul>
-    </div>
-
-    <div class ="pref-main">
-      <h2 class = "main-title">都道府県から探す</h2>
-        <ul class = "pref-group">
-            <li class = "pref-list1"><%= link_to "北海道・東北", url:root_path %></li>
-              <ul class = "hokkaido">
-                <div class = "lucky">
-                  <%= link_to "北海道", url:root_path, class: "pref-something" %>
-                  <%= link_to "青森", url:root_path, class: "pref-something" %>
-                  <%= link_to "岩手", url:root_path, class: "pref-something" %>
-                  <%= link_to "宮城", url:root_path, class: "pref-something" %>
-                  <%= link_to "秋田", url:root_path, class: "pref-something" %>
-                  <%= link_to "山形", url:root_path, class: "pref-something" %>
-                  <%= link_to "福島", url:root_path, class: "pref-something" %>
-                </div>
-              </ul>
-            <li class = "pref-list2"><%= link_to "関東", url:root_path %></li>
-              <ul class = "kanto">
-                <%= link_to "茨城", url:root_path, class: "pref-something" %>
-                <%= link_to "栃木", url:root_path, class: "pref-something" %>
-                <%= link_to "群馬", url:root_path, class: "pref-something" %>
-                <%= link_to "埼玉", url:root_path, class: "pref-something" %>
-                <%= link_to "千葉", url:root_path, class: "pref-something" %>
-                <%= link_to "東京", url:root_path, class: "pref-something" %>
-                <%= link_to "神奈川", url:root_path, class: "pref-something" %>
-              </ul>
-            <li class = "pref-list3"><%= link_to "北陸・甲信越", url:root_path %></li>
-              <ul class = "hokuriku">
-                <%= link_to "新潟", url:root_path, class: "pref-something" %>
-                <%= link_to "富山", url:root_path, class: "pref-something" %>
-                <%= link_to "石川", url:root_path, class: "pref-something" %>
-              </ul>
-            <li class = "pref-list4"><%= link_to "東海", url:root_path %></li>
-              <ul class = "tohkai">
-                <%= link_to "福井", url:root_path, class: "pref-something" %>
-                <%= link_to "山梨", url:root_path, class: "pref-something" %>
-                <%= link_to "長野", url:root_path, class: "pref-something" %>
-                <%= link_to "岐阜", url:root_path, class: "pref-something" %>
-                <%= link_to "静岡", url:root_path, class: "pref-something" %>
-                <%= link_to "愛知", url:root_path, class: "pref-something" %>
-              </ul>
-            <li class = "pref-list5"><%= link_to "関西", url:root_path %></li>
-              <ul class = "kansai">
-                <%= link_to "京都", url:root_path, class: "pref-something" %>
-                <%= link_to "大阪", url:root_path, class: "pref-something" %>
-                <%= link_to "兵庫", url:root_path, class: "pref-something" %>
-              </ul>
-            <li class = "pref-list6"><%= link_to "近畿", url:root_path %></li>
-              <ul class = "kinki">
-                <%= link_to "三重", url:root_path, class: "pref-something" %>
-                <%= link_to "滋賀", url:root_path, class: "pref-something" %>
-                <%= link_to "奈良", url:root_path, class: "pref-something" %>
-                <%= link_to "和歌山", url:root_path, class: "pref-something" %>
-              </ul>
-            <li class = "pref-list7"><%= link_to "中国・四国", url:root_path %></li>
-              <ul class = "china">
-                <%= link_to "鳥取", url:root_path, class: "pref-something" %>
-                <%= link_to "島根", url:root_path, class: "pref-something" %>
-                <%= link_to "岡山", url:root_path, class: "pref-something" %>
-                <%= link_to "広島", url:root_path, class: "pref-something" %>
-                <%= link_to "山口", url:root_path, class: "pref-something" %>
-                <%= link_to "徳島", url:root_path, class: "pref-something" %>
-                <%= link_to "香川", url:root_path, class: "pref-something" %>
-                <%= link_to "愛媛", url:root_path, class: "pref-something" %>
-                <%= link_to "高知", url:root_path, class: "pref-something" %>
-              </ul>
-            <li class = "pref-list8"><%= link_to "九州・沖縄", url:root_path %></li>
-              <ul class = "kyushu">
-                <%= link_to "福岡", url:root_path, class: "pref-something" %>
-                <%= link_to "佐賀", url:root_path, class: "pref-something" %>
-                <%= link_to "長崎", url:root_path, class: "pref-something" %>
-                <%= link_to "熊本", url:root_path, class: "pref-something" %>
-                <%= link_to "大分", url:root_path, class: "pref-something" %>
-                <%= link_to "宮崎", url:root_path, class: "pref-something" %>
-                <%= link_to "鹿児島", url:root_path, class: "pref-something" %>
-                <%= link_to "沖縄", url:root_path, class: "pref-something" %>
-              </ul>
-        </ul>
-        <script>
-          $('.hokkaido').hide();
-          $('.pref-list1').mouseover(function(){
-            $('.hokkaido').show(200);
-          }).mouseout(function(){
-            $('.hokkaido').hide(200);
-          });
-
-          $('.kanto').hide();
-          $('.pref-list2').mouseover(function(){
-            $('.kanto').show(200);
-          }).mouseout(function(){
-            $('.kanto').hide(200);
-          });
-
-          $('.hokuriku').hide();
-          $('.pref-list3').mouseover(function(){
-            $('.hokuriku').show(200);
-          }).mouseout(function(){
-            $('.hokuriku').hide(200);
-          });
-
-          $('.tohkai').hide();
-          $('.pref-list4').mouseover(function(){
-            $('.tohkai').show(200);
-          }).mouseout(function(){
-            $('.tohkai').hide(200);
-          });
-
-          $('.kansai').hide();
-          $('.pref-list5').mouseover(function(){
-            $('.kansai').show(200);
-          }).mouseout(function(){
-            $('.kansai').hide(200);
-          });
-
-          $('.kinki').hide();
-          $('.pref-list6').mouseover(function(){
-            $('.kinki').show(200);
-          }).mouseout(function(){
-            $('.kinki').hide(200);
-          });
-
-          $('.china').hide();
-          $('.pref-list7').mouseover(function(){
-            $('.china').show(200);
-          }).mouseout(function(){
-            $('.china').hide(200);
-          });
-
-          $('.kyushu').hide();
-          $('.pref-list8').mouseover(function(){
-            $('.kyushu').show(200);
-          }).mouseout(function(){
-            $('.kyushu').hide(200);
-          });
-        </script>
-    </div>
-
-    <div>
-      <%#= f.label :hoge, '日付を入れてね', class: 'hogehoge' %>
-      <%#= f.date_field :hoge, class: 'hogehoge' %>
-      <%#= f.label :hoge, '時間を入れてね', class: 'hogehoge' %>
-      <%#= f.time_field :hoge, class: 'hogehoge' %>
-    </div>
-
-  </body>
-</html>
+</body>
