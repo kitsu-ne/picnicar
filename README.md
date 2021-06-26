@@ -4,7 +4,7 @@
 
 | Column             | Type    | Options                  |
 | --------           | ------  | -----------              |
-| username           | string  | null: false unique: true |
+| user_name          | string  | null: false unique: true |
 | email              | string  | null: false unique: true |
 | encrypted_password | string  | null: false              |
 | first_kana         | string  | null: false              |
@@ -25,7 +25,7 @@
 
 | Column             | Type    | Options                  |
 | --------           | ------  | -----------              |
-| ownername          | string  | null: false unique: true |
+| owner_name          | string  | null: false unique: true |
 | email              | string  | null: false unique: true |
 | encrypted_password | string  | null: false              |
 | first_kana         | string  | null: false              |
@@ -42,7 +42,7 @@
 
 | Column           | Type       | Options     |
 | -----------      | ---------  | ----------- |
-| car_name         | string     | null: false |
+| carname         | string      | null: false |
 | explanation      | text       | null: false |
 | time             | integer    | null: false |
 | postal_code      | string     | null: false |

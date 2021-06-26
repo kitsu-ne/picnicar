@@ -1,0 +1,2 @@
+class CarTagRelation < ApplicationRecord
+end
