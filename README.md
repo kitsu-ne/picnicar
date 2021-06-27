@@ -42,7 +42,7 @@
 
 | Column           | Type       | Options     |
 | -----------      | ---------  | ----------- |
-| carname         | string      | null: false |
+| car_name         | string      | null: false |
 | explanation      | text       | null: false |
 | time             | integer    | null: false |
 | postal_code      | string     | null: false |
