@@ -56,6 +56,7 @@
 | ig_name          | string     |
 | fb_name          | string     |
 | tw_name          | string     |
+| car_tag          | string     |
 | owner            | references | null: false, foreign_key: true|
 
 ### Association

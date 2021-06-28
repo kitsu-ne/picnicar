@@ -13,7 +13,9 @@ class CreateCars < ActiveRecord::Migration[6.0]
       t.string  :ig_name
       t.string  :fb_name
       t.string  :tw_name
-      t.references :owner,       null: false, foreign_key: true
+      #これはユニークネスつけなきゃ？
+      t.string  :car_tag
+      t.references :owner,          null: false, foreign_key: true
       t.timestamps
     end
   end
