@@ -1,20 +1,18 @@
 # frozen_string_literal: true
 
-class DeviseCreateUsers < ActiveRecord::Migration[6.0]
+class DeviseCreateOwners < ActiveRecord::Migration[6.0]
   def change
-    create_table :users do |t|
+    create_table :owners do |t|
       ## Database authenticatable
-      t.string  :user_name,          null: false
-      t.string  :email,              null: false, default: ""
-      t.string  :encrypted_password, null: false, default: ""
-      t.string  :first_kana,         null: false
-      t.string  :last_kana,          null: false
-      t.date    :birth_date,         null: false
-      t.string  :phone_number,       null: false
-      t.integer :vibe_id,            null: false
-      t.integer :food_id,            null: false
-      t.integer :drink_id,           null: false
-      t.integer :prefecture_id,      null: false
+      t.string :owner_name,         null: false
+      t.string :email,              null: false, default: ""
+      t.string :encrypted_password, null: false, default: ""
+      t.string :first_kana,         null: false
+      t.string :last_kana,          null: false
+      t.date   :birth_date,         null: false
+      t.string :phone_number,       null: false
+      
+
 
       ## Recoverable
       t.string   :reset_password_token
@@ -45,9 +43,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.timestamps null: false
     end
 
-    add_index :users, :email,                unique: true
-    add_index :users, :reset_password_token, unique: true
-    # add_index :users, :confirmation_token,   unique: true
-    # add_index :users, :unlock_token,         unique: true
+    add_index :owners, :email,                unique: true
+    add_index :owners, :reset_password_token, unique: true
+    # add_index :owners, :confirmation_token,   unique: true
+    # add_index :owners, :unlock_token,         unique: true
   end
 end

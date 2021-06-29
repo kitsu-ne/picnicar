@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>Picnicar</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,44 +10,19 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="style.css">
     <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      (function(d) {
+      var config = {
+        kitId: 'qco7luc',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
   </head>
 
   <body>
-    <header class="header">
-      <div class = "header-filter">
-        <div class = "nav">
-          <div class="nav_left">
-            <%= link_to image_tag("Picnicar.jpeg", class: "logo"), root_path %>
-            <%= link_to "Picnicarとは？", root_path, class: "nav_button" %>
-            <%= link_to "店舗を登録する", root_path, class: "nav_button" %>
-            <%= link_to "お問い合わせ", root_path, class: "nav_button" %>
-          </div>
-          <%# ログインしているときは以下、とりまさせないでおく %>
-          <%# if user_signed_in? %>
-          <div class="nav_right">
-            <%#= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-            <%#= link_to "New Proto", new_prototype_path, class: :nav_btn %>
-          <%# else %>
-            <%= link_to "ログイン", new_user_session_path, class: :nav_btn %>
-            <%= link_to "新規登録", new_user_registration_path, class: :nav_btn %>
-          </div>
-          <%# end %>
-          <%# ログインしていないときは上記を表示、今はこっちやな %>
-        </div>
-      </div>
-    </header>
     <%= yield %>
-    <footer class="footer">
-      <div class = "footer_main">
-        <div class="footer_left">
-          <%= link_to "店舗を探す", root_path, class: "footer_button" %>
-          <%= link_to "開発への思い", root_path, class: "footer_button" %>
-          <%= link_to "その他", root_path, class: "footer_button" %>
-        </div>
-        <div class="footer_right">
-          <p class="copyright">Copyright © LePTec All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>
