@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2021_06_26_073348) do
     t.string "ig_name"
     t.string "fb_name"
     t.string "tw_name"
+    t.string "car_tag"
     t.bigint "owner_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -64,17 +65,9 @@ ActiveRecord::Schema.define(version: 2021_06_26_073348) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "user_name", null: false
+    t.string "name", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "first_kana", null: false
-    t.string "last_kana", null: false
-    t.date "birth_date", null: false
-    t.string "phone_number", null: false
-    t.integer "vibe_id", null: false
-    t.integer "food_id", null: false
-    t.integer "drink_id", null: false
-    t.integer "prefecture_id", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
